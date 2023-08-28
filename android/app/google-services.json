@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "835266895679",
+    "project_id": "pokedex-flutter-bc673",
+    "storage_bucket": "pokedex-flutter-bc673.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835266895679:android:74fa744ef4046b0f267d8a",
+        "android_client_info": {
+          "package_name": "com.example.practica_3_julio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835266895679-r20srq34mjlghvki37hmhv49h51ggut3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_IWPNEx0mQO4lL-8-GmSBaxFqkMRpvog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835266895679-r20srq34mjlghvki37hmhv49h51ggut3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "835266895679-uupiria46jo38cka76flglose7usgk5b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.practica3Julio.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
