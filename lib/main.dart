@@ -4,6 +4,7 @@ import 'package:practica_3_julio/providers/category_provider.dart';
 import 'package:practica_3_julio/providers/login_provider%20.dart';
 import 'package:practica_3_julio/providers/pokemon_provider.dart';
 import 'package:practica_3_julio/screens/login_screen.dart';
+import 'package:practica_3_julio/screens/logout.dart';
 import 'package:practica_3_julio/screens/pokemon_details.dart';
 import 'package:practica_3_julio/screens/pokemon_favorite_list.dart';
 import 'package:practica_3_julio/screens/pokemon_screen.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         providers: [
           ChangeNotifierProvider(create: (context) => CategoryProvider()),
           ChangeNotifierProvider(create: (context) => PokemonProvider()),
-          ChangeNotifierProvider(create: (context) => AuthProvider()),
+          ChangeNotifierProvider(create: (context) => LoginProvider()),
 
         ],
         child: MaterialApp(
@@ -41,7 +42,8 @@ class MyApp extends StatelessWidget {
             MainWidget.routeName: (context) => const MainWidget(),
             PokemonDetailsScreen.routeName: (context) => const
             PokemonDetailsScreen(),
-                      LoginScreen.routeName: (context) => const LoginScreen(),
+            LoginScreen.routeName: (context) => const LoginScreen(),
+            Logout.routeName: (context) => const Logout(),
 
           },
         ));
@@ -66,7 +68,7 @@ class _MainWidgetState extends State<MainWidget> {
     CategoryScreen(),
     PokemonScreenWidget(),
     PokemonFavoriteListScreen(),
-    LoginScreen()
+    Logout()
   ];
 
   void _onTapItem(int index) {
@@ -80,18 +82,24 @@ class _MainWidgetState extends State<MainWidget> {
     return Scaffold(
       body: _mainWidgets[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+                type: BottomNavigationBarType.fixed, //mas de 4 items
+
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.category),
+            icon: Icon(Icons.category,color: Colors.blue,),
             label: 'Categorias',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.details),
+            icon: Icon(Icons.details,color: Colors.blue,),
             label: 'Pokemons',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
+            icon: Icon(Icons.favorite,color: Colors.blue,),
             label: 'Favoritos',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person,color: Colors.blue,),
+            label: 'logout',
           )
         ],
         currentIndex: _selectedIndex,
